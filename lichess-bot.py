@@ -1,10 +1,5 @@
-import requests
-import os
+"""Starting point for lichess-bot."""
+from lib.lichess_bot import start_program
 
-token = os.environ.get("LICHESS_BOT_TOKEN")
-headers = {"Authorization": f"Bearer {token}"}
-response = requests.post("https://lichess.org/api/bot/account/upgrade", headers=headers)
-
-print("STATUS CODE:", response.status_code)
-print("RESPONSE:", response.text
-     )
+if __name__ == "__main__":
+    start_program()
